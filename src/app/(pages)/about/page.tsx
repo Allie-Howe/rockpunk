@@ -3,9 +3,11 @@ import Image from 'next/image';
 const PLACEHOLDER_WIDTH = 360
 const PLACEHOLDER_HEIGHT = 360
 
+export const Header = ({title}: {title: string}) => <h2 className='text-6xl text-blue-900 mb-10'>{title}</h2>
+
 export default function About() {
   return <>
-    <h2 className='text-6xl text-blue-900 mb-10'>about us</h2>
+    <Header title='about us' />
     <div className='grid grid-cols-2 gap-7'>
       <div className='flex w-full justify-center'>
         <div>
