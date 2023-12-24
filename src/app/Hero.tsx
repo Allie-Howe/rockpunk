@@ -32,7 +32,7 @@ export default function Hero() {
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">Welcome to Qrink</h1>
               <p className="max-w-[600px]">
-                Your one-stop platform for all your needs. Build, deploy, and scale with us.
+                The modern, easy approach to hydration.
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
