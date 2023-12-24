@@ -19,7 +19,7 @@ const NavLink = ({children, className, ...props}: PropsWithChildren<HTMLProps<HT
 export const Nav = () => {
   return (<>
     <div className='m-7' />
-    <nav className="bg-white shadow-xl fixed left-0 right-0">
+    <nav className="bg-white shadow-xl fixed left-0 right-0 z-10">
       <div className="container px-6 py-3 mx-auto md:flex md:justify-between md:items-center">
         <div className="flex items-center justify-between">
           <div>
