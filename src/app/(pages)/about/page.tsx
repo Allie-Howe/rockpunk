@@ -1,9 +1,8 @@
 import Image from 'next/image';
+import { Header } from '../utils';
 
 const PLACEHOLDER_WIDTH = 360
 const PLACEHOLDER_HEIGHT = 360
-
-export const Header = ({title}: {title: string}) => <h2 className='text-6xl text-blue-900 mb-10'>{title}</h2>
 
 export default function About() {
   return <>
