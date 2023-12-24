@@ -15,7 +15,7 @@ const clipPath = "polygon(0% 0%, 0% 82.5%, 1.69492% 84.3293%, 3.38983% 86.1385%,
 export default function Hero() {
   return (
     <section
-      className="w-full py-12 bg-blue-500"
+      className="w-full pt-12 pb-64 bg-blue-500"
       style={{clipPath}}
     >
       <div className="container px-4 md:px-6">
