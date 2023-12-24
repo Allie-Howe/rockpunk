@@ -18,7 +18,7 @@ const NavLink = ({children, ...props}: PropsWithChildren<LinkProps>) => {
 
 export const Nav = () => {
   return (<>
-    <nav className="bg-white shadow-xl fixed left-0 right-0 z-10">
+    <nav className="bg-white shadow-xl fixed left-0 right-0 z-20">
       <div className='flex flex-col'>
         <div className='flex gap-10 bg-yellow-200 py-1 px-3'>
           <p><b>this site is not real.</b></p>
