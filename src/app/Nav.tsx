@@ -1,5 +1,11 @@
 import { HTMLProps, PropsWithChildren } from 'react'
 
+/**
+ * v0 by Vercel.
+ * Iterated and adapted by Allie.
+ * @see https://v0.dev/t/DbY9DS6A6S1
+ */
+
 const NavLink = ({children, className, ...props}: PropsWithChildren<HTMLProps<HTMLAnchorElement>>) => {
   return (<a
     className={`my-1 text-sm text-gray-700 hover:text-blue-500 md:mx-4 md:my-0 ${className}`}
