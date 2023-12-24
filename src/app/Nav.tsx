@@ -1,3 +1,4 @@
+import Link, {LinkProps} from 'next/link'
 import { HTMLProps, PropsWithChildren } from 'react'
 
 /**
@@ -6,14 +7,13 @@ import { HTMLProps, PropsWithChildren } from 'react'
  * @see https://v0.dev/t/DbY9DS6A6S1
  */
 
-const NavLink = ({children, className, ...props}: PropsWithChildren<HTMLProps<HTMLAnchorElement>>) => {
-  return (<a
-    className={`my-1 text-sm text-gray-700 hover:text-blue-500 md:mx-4 md:my-0 ${className}`}
-    href="#"
+const NavLink = ({children, ...props}: PropsWithChildren<LinkProps>) => {
+  return (<Link
+    className={`my-1 text-sm text-gray-700 hover:text-blue-500 md:mx-4 md:my-0`}
     {...props}
   >
     {children}
-  </a>)
+  </Link>)
 }
 
 export const Nav = () => {
@@ -46,9 +46,9 @@ export const Nav = () => {
         </div>
         <div className="items-center md:flex">
           <div className="flex flex-col md:flex-row md:mx-6">
-            <NavLink>Home</NavLink>
-            <NavLink>About</NavLink>
-            <NavLink>Services</NavLink>
+            <NavLink href='/'>Home</NavLink>
+            <NavLink href='/about'>About</NavLink>
+            <NavLink href='/services'>Services</NavLink>
           </div>
         </div>
       </div>
