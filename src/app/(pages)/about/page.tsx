@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Header } from '../../../utils';
+import { Header } from '../utils';
 
 const PLACEHOLDER_WIDTH = 360
 const PLACEHOLDER_HEIGHT = 360
