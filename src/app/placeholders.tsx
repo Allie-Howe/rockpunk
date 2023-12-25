@@ -5,15 +5,15 @@ const PLACEHOLDER_HEIGHT = 360
 
 export const PlaceholderImage = () => (
   <div className='flex w-full justify-center'>
-  <div>
-    <Image
-      alt='Placeholder'
-      className='rounded-lg'
-      src={`https://dummyimage.com/${PLACEHOLDER_WIDTH}x${PLACEHOLDER_HEIGHT}/fff/aaa`}
-      width={PLACEHOLDER_WIDTH}
-      height={PLACEHOLDER_HEIGHT}
-      />
-  </div>
+    <div>
+      <Image
+        alt='Placeholder'
+        className='rounded-lg'
+        src={`https://dummyimage.com/${PLACEHOLDER_WIDTH}x${PLACEHOLDER_HEIGHT}/fff/aaa`}
+        width={PLACEHOLDER_WIDTH}
+        height={PLACEHOLDER_HEIGHT}
+        />
+    </div>
 </div>
 )
 export const PlaceholderText = () => (

@@ -5,8 +5,8 @@ export default function Services() {
   return <>
     <Header title='services' />
     <div className='grid grid-cols-2 gap-7'>
-    <PlaceholderText />
-    <PlaceholderImage />
+      <PlaceholderText />
+      <PlaceholderImage />
     </div>
   </>
 }
