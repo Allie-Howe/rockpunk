@@ -19,7 +19,7 @@ const NavLink = ({children, ...props}: PropsWithChildren<LinkProps>) => {
 }
 
 export const Nav = () => {
-  const [visibility, setVisibility] = useState('');
+  const [visibility, setVisibility] = useState('hidden');
 
   const onToggle = () => setVisibility(p => p ? '': 'hidden');
 
