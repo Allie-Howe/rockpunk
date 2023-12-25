@@ -4,7 +4,7 @@ import { PropsWithChildren } from 'react'
 
 import './globals.css'
 import { Nav } from './Nav'
-import { cols } from './(pages)/utils'
+import { cols } from '../utils'
 
 const inter = Inter({ subsets: ['latin'] })
 
