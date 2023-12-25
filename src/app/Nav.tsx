@@ -59,6 +59,6 @@ export const Nav = () => {
         </div>
       </div>
     </nav>
-    <div className='p-7' />
+    <div className='p-11' />
   </>)
 }

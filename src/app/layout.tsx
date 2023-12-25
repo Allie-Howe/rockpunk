@@ -4,6 +4,7 @@ import { PropsWithChildren } from 'react'
 
 import './globals.css'
 import { Nav } from './Nav'
+import { cols } from './(pages)/utils'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: PropsWithChildren) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-blue-100`}>
+      <body className={`${inter.className} bg-${cols.bg}`}>
         <Nav />
         {children}
       </body>
