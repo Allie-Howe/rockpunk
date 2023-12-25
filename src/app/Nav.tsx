@@ -2,6 +2,8 @@
 
 import Link, {LinkProps} from 'next/link'
 import { PropsWithChildren, useState } from 'react'
+import logo from './qrink_logo.png'
+import Image from 'next/image'
 
 /**
  * v0 by Vercel.
@@ -33,12 +35,12 @@ export const Nav = () => {
         <div className="container px-6 py-3 mx-auto md:flex md:justify-between md:items-center">
           <div className="flex items-center justify-between">
             <div>
-              <a
-                className="text-2xl font-bold text-gray-800  lg:text-3xl hover:text-gray-700"
-                href="#"
+              <Link
+                className="text-2xl font-bold text-gray-800 lg:text-3xl hover:opacity-75 duration-200"
+                href="/"
               >
-                Qrink
-              </a>
+                <Image alt='qrink logo' src={logo} width={50} height={50} />
+              </Link>
             </div>
             <div className="flex md:hidden">
               <button
