@@ -18,7 +18,7 @@ export default function Hero() {
         <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
           <Image
             alt="Hero"
-            className="mx-auto aspect-video rounded-xl object-bottom sm:w-full lg:order-last lg:aspect-square z-10"
+            className="mx-auto aspect-video rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square z-10"
             height={PLACEHOLDER_HEIGHT}
             src={`https://dummyimage.com/${PLACEHOLDER_WIDTH}x${PLACEHOLDER_HEIGHT}/fff/aaa`}
             width={PLACEHOLDER_WIDTH}
