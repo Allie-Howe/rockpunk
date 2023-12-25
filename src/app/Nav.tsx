@@ -1,5 +1,7 @@
+'use client'
+
 import Link, {LinkProps} from 'next/link'
-import { HTMLProps, PropsWithChildren } from 'react'
+import { PropsWithChildren, useState } from 'react'
 
 /**
  * v0 by Vercel.
@@ -17,6 +19,10 @@ const NavLink = ({children, ...props}: PropsWithChildren<LinkProps>) => {
 }
 
 export const Nav = () => {
+  const [visibility, setVisibility] = useState('');
+
+  const onToggle = () => setVisibility(p => p ? '': 'hidden');
+
   return (<>
     <nav className="bg-white shadow-xl fixed left-0 right-0 z-20">
       <div className='flex flex-col'>
@@ -39,6 +45,7 @@ export const Nav = () => {
                 aria-label="toggle menu"
                 className="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600"
                 type="button"
+                onClick={onToggle}
               >
                 <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
                   <path
@@ -49,7 +56,7 @@ export const Nav = () => {
               </button>
             </div>
           </div>
-          <div className="items-center md:flex">
+          <div className={`${visibility} items-center md:flex`}>
             <div className="flex flex-col md:flex-row md:mx-6">
               <NavLink href='/'>Home</NavLink>
               <NavLink href='/about'>About</NavLink>
