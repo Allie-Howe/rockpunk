@@ -1,3 +1,21 @@
+import Image from 'next/image'
+
+const PLACEHOLDER_WIDTH = 360
+const PLACEHOLDER_HEIGHT = 360
+
+export const PlaceholderImage = () => (
+  <div className='flex w-full justify-center'>
+  <div>
+    <Image
+      alt='Placeholder'
+      className='rounded-lg'
+      src={`https://dummyimage.com/${PLACEHOLDER_WIDTH}x${PLACEHOLDER_HEIGHT}/fff/aaa`}
+      width={PLACEHOLDER_WIDTH}
+      height={PLACEHOLDER_HEIGHT}
+      />
+  </div>
+</div>
+)
 export const PlaceholderText = () => (
   <div className='flex flex-col gap-3'>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates excepturi repellat rem optio mollitia unde quia, iure sit aliquam dignissimos obcaecati similique natus quasi adipisci accusantium quod provident nemo nulla.</p>
