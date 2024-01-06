@@ -1,14 +1,13 @@
 import type { Metadata } from 'next'
-import { Belanosima, Inter } from 'next/font/google'
 import { PropsWithChildren } from 'react'
 
 import './globals.css'
 import { Nav } from './Nav'
-import { belanosima, inter } from './fonts'
+import { inter } from './fonts'
 
 export const metadata: Metadata = {
-  title: 'Qrink',
-  description: 'Drink with Qrink',
+  title: 'rock punk',
+  description: 'rock punk, a unique bouldering studio in the heart of Norwich',
 }
 
 export default function RootLayout({children}: PropsWithChildren) {
