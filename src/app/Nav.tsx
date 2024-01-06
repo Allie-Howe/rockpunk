@@ -13,7 +13,7 @@ import Image from 'next/image'
 
 const NavLink = ({children, ...props}: PropsWithChildren<LinkProps>) => {
   return (<Link
-    className={`my-1 text-sm text-gray-700 hover:text-blue-500 md:mx-4 md:my-0`}
+    className={`my-1 text-sm hover:text-blue-500 md:mx-4 md:my-0`}
     {...props}
   >
     {children}
@@ -26,26 +26,29 @@ export const Nav = () => {
   const onToggle = () => setVisibility(p => p ? '': 'hidden');
 
   return (<>
-    <nav className="bg-white shadow-xl fixed left-0 right-0 z-20">
+    <nav className="bg-gray-700  shadow-xl fixed left-0 right-0 z-20">
       <div className='flex flex-col'>
         <div className='flex gap-10 bg-yellow-200 py-1 px-3'>
           <p><b>this site is not real.</b></p>
           <p>looks nice though, don&apos;t you think?</p>
         </div>
-        <div className="container px-6 py-3 mx-auto md:flex md:justify-between md:items-center">
+        <div className="container text-white px-6 py-3 mx-auto md:flex md:justify-between md:items-center">
           <div className="flex items-center justify-between">
             <div>
               <Link
-                className="text-2xl font-bold text-gray-800 lg:text-3xl hover:opacity-75 duration-200"
+                className="text-2xl font-bold lg:text-3xl hover:opacity-75 duration-200"
                 href="/"
               >
-                <Image alt='qrink logo' src={logo} width={50} height={50} />
+                <div className='flex text-red-500'>
+                <div>⬤</div>
+                <div style={{fontSize: '2.5rem', translate: '0 .25rem', margin: '0 -.5rem'}}>▲</div>
+                </div>
               </Link>
             </div>
             <div className="flex md:hidden">
               <button
                 aria-label="toggle menu"
-                className="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600"
+                className="hover:text-gray-600 focus:outline-none focus:text-gray-600"
                 type="button"
                 onClick={onToggle}
               >
