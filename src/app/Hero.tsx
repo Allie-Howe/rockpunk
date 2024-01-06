@@ -5,6 +5,7 @@
 import Image from 'next/image'
 import Link from "next/link"
 import { belanosima } from './fonts';
+import { Socials } from './page';
 
 const PLACEHOLDER_WIDTH = 550;
 const PLACEHOLDER_HEIGHT = 550;
@@ -44,6 +45,10 @@ export default function Hero() {
                 Contact Us
               </Link>
             </div>
+            <div className='flex gap-2'>
+              <Socials size={40} />
+            </div>
+
           </div>
         </div>
       </div>

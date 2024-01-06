@@ -6,6 +6,8 @@ import { PropsWithChildren } from 'react';
 import { belanosima } from './fonts';
 
 const responsiveContainer = 'px-3 md:px-10'
+const Header = ({title}: {title: string}) => <h3 className={`text-8xl ${belanosima.className}`}>{title}</h3>
+
 
 export default function Main() {
   return <main className={`flex min-h-screen flex-col`}>
@@ -13,7 +15,7 @@ export default function Main() {
     <RockSection>
       <div className='grid gap-5 md:grid-cols-2'>
         <div>
-          <h3 className={`text-8xl ${belanosima.className}`}>location</h3>
+          <Header title='location' />
           <div className='text-gray-200'>
             <p>26A Magdalen Street</p>
             <p>Norwich</p>
@@ -27,7 +29,10 @@ export default function Main() {
         </div>
       </div>
     </RockSection>
+    <div className={`${responsiveContainer}`}>
+      <Header title='reviews' />
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ducimus laborum iusto, similique odit quos tempore placeat atque ab illum aspernatur? Numquam sint itaque voluptates aperiam sit ratione repudiandae obcaecati.
+    </div>
     <RockSection>
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ducimus laborum iusto, similique odit quos tempore placeat atque ab illum aspernatur? Numquam sint itaque voluptates aperiam sit ratione repudiandae obcaecati.
     </RockSection>
@@ -48,21 +53,24 @@ const RockSection = ({children}: PropsWithChildren) => {
 }
 
 const Footer = () => {
-  const iconProps: MdiReactIconProps = {
-    size: 80,
-    className: 'hover:text-gray-300 cursor-pointer'
-  }
   return (
     <footer className={`flex flex-col gap-10 ${responsiveContainer}`}>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam minus quas maxime culpa officiis ipsa quis quod dignissimos vel dolor aliquam tempore in sit, sequi ea nisi nostrum doloribus. Ducimus!</p>
       <div className='flex justify-center'>
-        <a href="http://www.instagram.com/rockpunkclimbing" target='_blank'>
-          <InstagramIcon {...iconProps} />
-        </a>
-        <a href="https://www.facebook.com/rockpunknorwich" target='_blank'>
-          <FacebookIcon {...iconProps} />
-        </a>
+        <Socials size={80} className='cursor-pointer' />
       </div>
     </footer>
   )
+}
+
+export const Socials = ({className, ...props}: MdiReactIconProps) => {
+  const baseStyles = `hover:text-gray-300 ${className}`
+  return <>
+    <a href="http://www.instagram.com/rockpunkclimbing" target='_blank'>
+      <InstagramIcon className={baseStyles} {...props} />
+    </a>
+    <a href="https://www.facebook.com/rockpunknorwich" target='_blank'>
+      <FacebookIcon className={baseStyles} {...props} />
+    </a>
+  </>
 }
