@@ -13,7 +13,7 @@ const PLACEHOLDER_HEIGHT = 550;
 export default function Hero() {
   return (<>
     <section
-      className={`w-full -mb-16 pt-12 ${belanosima.className}`}
+      className={`w-full md:-mb-16 pt-12 ${belanosima.className}`}
     >
       <div className="container px-4 md:px-6">
         <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
@@ -26,11 +26,11 @@ export default function Hero() {
           />
           <div className="flex flex-col justify-center space-y-4 text-white">
             <div className="space-y-2">
-              <h1 className="font-bold tracking-tighter sm:text-5xl xl:text-7xl/none">rock punk</h1>
-              <p className="text-2xl max-w-[600px]">a unique bouldering studio in the heart of Norwich.</p>
-              <p className="text-2xl max-w-[600px]">inspired by Japanese &apos;hole in the wall&apos; style micro gyms.</p>
+              <h1 className="font-bold tracking-tighter text-7xl text-center md:text-left xl:text-7xl/none">rock punk</h1>
+              <p className="text-md md:text-2xl max-w-[600px]">a unique bouldering studio in the heart of Norwich.</p>
+              <p className="text-md md:text-2xl max-w-[600px]">inspired by Japanese &apos;hole in the wall&apos; style micro gyms.</p>
             </div>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row">
+            <div className="flex flex-col justify-center md:justify-normal gap-2 min-[400px]:flex-row">
               <Link
                 className="inline-flex h-10 items-center justify-center rounded-md bg-white px-8 text-sm font-medium text-red-500 shadow transition-colors hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 disabled:pointer-events-none disabled:opacity-50"
                 href="#"
