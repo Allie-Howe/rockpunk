@@ -1,11 +1,10 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Belanosima, Inter } from 'next/font/google'
 import { PropsWithChildren } from 'react'
 
 import './globals.css'
 import { Nav } from './Nav'
-
-const inter = Inter({ subsets: ['latin'] })
+import { belanosima, inter } from './fonts'
 
 export const metadata: Metadata = {
   title: 'Qrink',

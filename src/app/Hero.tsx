@@ -4,7 +4,7 @@
  */
 import Image from 'next/image'
 import Link from "next/link"
-import { belanosima } from './page';
+import { belanosima } from './fonts';
 
 const PLACEHOLDER_WIDTH = 550;
 const PLACEHOLDER_HEIGHT = 550;
