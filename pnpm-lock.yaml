@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  mdi-react:
+    specifier: 9.4.0
+    version: 9.4.0(react@18.2.0)
   next:
     specifier: 14.0.4
     version: 14.0.4(react-dom@18.2.0)(react@18.2.0)
@@ -1801,6 +1804,14 @@ packages:
     dependencies:
       yallist: 4.0.0
     dev: true
+
+  /mdi-react@9.4.0(react@18.2.0):
+    resolution: {integrity: sha512-3McdJimHT2CO+bSDGgJ1SSmU6HvXLEwLdfFi3M/nQT4aauvVxIbIGTCI8eOCcPtkyVyVuZRcCZ7Gw0oaGldYLw==}
+    peerDependencies:
+      react: '>=0.14.0'
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
