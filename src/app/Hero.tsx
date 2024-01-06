@@ -26,9 +26,9 @@ export default function Hero() {
           />
           <div className="flex flex-col justify-center space-y-4 text-white">
             <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">rock punk</h1>
-              <p className="max-w-[600px]">a unique bouldering studio in the heart of Norwich.</p>
-              <p className="max-w-[600px]">inspired by Japanese &apos;hole in the wall&apos; style micro gyms.</p>
+              <h1 className="font-bold tracking-tighter sm:text-5xl xl:text-7xl/none">rock punk</h1>
+              <p className="text-2xl max-w-[600px]">a unique bouldering studio in the heart of Norwich.</p>
+              <p className="text-2xl max-w-[600px]">inspired by Japanese &apos;hole in the wall&apos; style micro gyms.</p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
               <Link
