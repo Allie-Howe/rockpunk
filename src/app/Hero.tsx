@@ -13,7 +13,7 @@ const PLACEHOLDER_HEIGHT = 550;
 export default function Hero() {
   return (<>
     <section
-      className={`w-full pt-12 bg-red-500 ${belanosima.className}`}
+      className={`w-full -mb-16 pt-12 ${belanosima.className}`}
     >
       <div className="container px-4 md:px-6">
         <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
@@ -48,5 +48,5 @@ export default function Hero() {
         </div>
       </div>
     </section>
-    <svg className='md:-translate-y-10' id="visual" viewBox="0 0 900 250" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1"><path d="M0 154L37.5 168.8C75 183.7 150 213.3 225 214C300 214.7 375 186.3 450 151.5C525 116.7 600 75.3 675 61.7C750 48 825 62 862.5 69L900 76L900 0L862.5 0C825 0 750 0 675 0C600 0 525 0 450 0C375 0 300 0 225 0C150 0 75 0 37.5 0L0 0Z" fill="rgb(239 68 68)" strokeLinecap="round" strokeLinejoin="miter"></path></svg>  </>)
+    </>)
 }
