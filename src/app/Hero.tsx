@@ -45,7 +45,7 @@ export default function Hero() {
                 Contact Us
               </Link>
             </div>
-            <div className='flex gap-2'>
+            <div className='flex justify-center md:justify-start gap-2'>
               <Socials size={40} />
             </div>
 
