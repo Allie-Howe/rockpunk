@@ -1,9 +1,7 @@
 import Hero from './Hero';
-import InstagramIcon from 'mdi-react/InstagramIcon'
-import FacebookIcon from 'mdi-react/FacebookIcon'
-import { MdiReactIconProps } from 'mdi-react';
 import { PropsWithChildren } from 'react';
 import { belanosima } from './fonts';
+import { Socials } from './components/Socials';
 
 const responsiveContainer = 'px-3 md:px-10'
 const Header = ({title}: {title: string}) => <h3 className={`text-8xl ${belanosima.className}`}>{title}</h3>
@@ -61,16 +59,4 @@ const Footer = () => {
       </div>
     </footer>
   )
-}
-
-export const Socials = ({className, ...props}: MdiReactIconProps) => {
-  const baseStyles = `hover:text-gray-300 ${className}`
-  return <>
-    <a href="http://www.instagram.com/rockpunkclimbing" target='_blank'>
-      <InstagramIcon className={baseStyles} {...props} />
-    </a>
-    <a href="https://www.facebook.com/rockpunknorwich" target='_blank'>
-      <FacebookIcon className={baseStyles} {...props} />
-    </a>
-  </>
 }

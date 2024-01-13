@@ -5,7 +5,7 @@
 import Image from 'next/image'
 import Link from "next/link"
 import { belanosima } from './fonts';
-import { Socials } from './page';
+import { Socials } from './components/Socials';
 
 const PLACEHOLDER_WIDTH = 550;
 const PLACEHOLDER_HEIGHT = 550;
