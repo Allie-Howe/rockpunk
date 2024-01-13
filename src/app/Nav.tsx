@@ -2,23 +2,13 @@
 
 import Link, {LinkProps} from 'next/link'
 import { PropsWithChildren, useState } from 'react'
-import logo from './qrink_logo.png'
-import Image from 'next/image'
+import { NavLink } from './components/NavLink';
 
 /**
  * v0 by Vercel.
  * Iterated and adapted by Allie.
  * @see https://v0.dev/t/DbY9DS6A6S1
  */
-
-const NavLink = ({children, ...props}: PropsWithChildren<LinkProps>) => {
-  return (<Link
-    className={`my-1 text-sm hover:text-red-500 md:mx-4 md:my-0`}
-    {...props}
-  >
-    {children}
-  </Link>)
-}
 
 export const Nav = () => {
   const [visibility, setVisibility] = useState('hidden');
@@ -66,6 +56,7 @@ export const Nav = () => {
               <NavLink href='/'>Home</NavLink>
               <NavLink href='/about'>About</NavLink>
               <NavLink href='/services'>Services</NavLink>
+              <NavLink href='/login'>Login/Register</NavLink>
             </div>
           </div>
         </div>
