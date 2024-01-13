@@ -52,7 +52,7 @@ export const Nav = () => {
             </div>
           </div>
           <div className={`${visibility} items-center md:flex`}>
-            <div className="flex flex-col md:flex-row md:mx-6">
+            <div className="flex flex-col md:flex-row md:mx-6 md:gap-5">
               <NavLink href='/'>Home</NavLink>
               <NavLink href='/about'>About</NavLink>
               <NavLink href='/services'>Services</NavLink>
