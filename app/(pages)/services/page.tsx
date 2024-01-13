@@ -1,4 +1,4 @@
-import { PlaceholderImage, PlaceholderText } from '@/app/placeholders';
+import { PlaceholderImage, PlaceholderText } from '../../placeholders';
 import { Header } from '../utils';
 
 export default function Services() {

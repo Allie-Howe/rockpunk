@@ -1,5 +1,5 @@
 import { Header } from '../utils';
-import { PlaceholderImage, PlaceholderText } from '@/app/placeholders';
+import { PlaceholderImage, PlaceholderText } from '../../placeholders';
 
 export default function About() {
   return <>

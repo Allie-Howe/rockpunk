@@ -1,7 +1,7 @@
 'use client'
 
-import Link, {LinkProps} from 'next/link'
-import { PropsWithChildren, useState } from 'react'
+import Link, {} from 'next/link'
+import { useState } from 'react'
 import { NavLink } from './components/NavLink';
 
 /**
