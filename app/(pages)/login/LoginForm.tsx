@@ -1,21 +1,28 @@
+'use client'
+
 import { Input } from '../../components/Input'
 import { LoginRegisterGrid } from './LoginRegisterGrid'
 import { NavLink } from '../../components/NavLink'
+import { useFormState } from 'react-dom'
+import { authenticate } from '../../lib/actions'
 
 export const LoginForm = () => {
+  const [errorMsg, dispatch] = useFormState(authenticate, undefined)
+
   return <>
-    <form action="">
+    <form action={dispatch}>
       <div className='flex flex-col gap-10'>
         <LoginRegisterGrid>
           <label htmlFor='email'>Email:</label>
-          <Input id='email' />
+          <Input required id='email' />
           <label htmlFor='password'>Password:</label>
-          <Input id='password' />
+          <Input required id='password' />
         </LoginRegisterGrid>
         <div className='flex justify-center gap-2 items-center'>
           <button type="submit" className='bg-white hover:bg-red-500 text-black rounded-md px-5 py-2'>Login</button>
           <p>or <NavLink href='/register'>Register</NavLink></p>
         </div>
+        <p>{errorMsg}</p>
       </div>
     </form>
   </>
