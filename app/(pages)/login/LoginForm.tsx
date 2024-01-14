@@ -6,6 +6,31 @@ import { NavLink } from '../../components/NavLink'
 import { useFormState } from 'react-dom'
 import { authenticate } from '../../lib/actions'
 
+export const EmailInput = () => (<>
+  <label htmlFor='email'>Email:</label>
+  <Input
+    required
+    id='email'
+    name='email'
+    type='email'
+    placeholder='Enter your email here...'
+  />
+</>)
+
+interface PasswordInputProps {
+  confirmation?: boolean
+}
+export const PasswordInput = ({confirmation}: PasswordInputProps) => (<>
+  <label htmlFor='password'>{confirmation && 'Confirm '} Password:</label>
+  <Input
+    required
+    id={confirmation ? 'confirmPassword' : 'password'}
+    name={confirmation ? 'confirmPassword' : 'password'}
+    type='password'
+    placeholder='Enter your password here...'
+  />
+</>)
+
 export const LoginForm = () => {
   const [errorMsg, dispatch] = useFormState(authenticate, undefined)
 
@@ -13,21 +38,8 @@ export const LoginForm = () => {
     <form action={dispatch}>
       <div className='flex flex-col gap-10'>
         <LoginRegisterGrid>
-          <label htmlFor='email'>Email:</label>
-          <Input
-            required
-            id='email'
-            name='email'
-            type='email'
-          />
-          <label htmlFor='password'>Password:</label>
-          <Input
-            required
-            id='password'
-            name='password'
-            type='password'
-            minLength={8}
-          />
+          <EmailInput />
+          <PasswordInput />
         </LoginRegisterGrid>
         <div className='flex justify-center gap-2 items-center'>
           <button type="submit" className='bg-white hover:bg-red-500 text-black rounded-md px-5 py-2'>Login</button>
