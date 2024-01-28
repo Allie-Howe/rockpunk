@@ -20,16 +20,19 @@ export const EmailInput = () => (<>
 interface PasswordInputProps {
   confirmation?: boolean
 }
-export const PasswordInput = ({confirmation}: PasswordInputProps) => (<>
-  <label htmlFor='password'>{confirmation && 'Confirm '} Password:</label>
-  <Input
-    required
-    id={confirmation ? 'confirmPassword' : 'password'}
-    name={confirmation ? 'confirmPassword' : 'password'}
-    type='password'
-    placeholder='Enter your password here...'
-  />
-</>)
+export const PasswordInput = ({confirmation}: PasswordInputProps) => {
+  const id = confirmation ? 'confirmPassword' : 'password'
+  return <>
+    <label htmlFor={id}>{confirmation && 'Confirm '} Password:</label>
+    <Input
+      required
+      id={id}
+      name={id}
+      type='password'
+      placeholder='Enter your password here...'
+    />
+  </>
+}
 
 export const LoginForm = () => {
   const [errorMsg, dispatch] = useFormState(authenticate, undefined)

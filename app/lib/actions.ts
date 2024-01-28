@@ -1,7 +1,7 @@
 'use server'
 
 import { AuthError } from 'next-auth';
-import { signIn } from '../auth';
+import { createUser, signIn } from '../auth';
 
 export async function authenticate(prevState: string | undefined, formData: FormData) {
   try {
@@ -14,6 +14,17 @@ export async function authenticate(prevState: string | undefined, formData: Form
         default:
           return 'Something went wrong';
       }
+    }
+    throw error;
+  }
+}
+export async function register(prevState: string | undefined, formData: FormData) {
+  try {
+    await createUser(formData)
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error)
+      return error.message
     }
     throw error;
   }
