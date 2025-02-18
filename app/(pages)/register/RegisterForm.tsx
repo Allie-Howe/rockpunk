@@ -8,7 +8,7 @@ import { EmailInput, PasswordInput } from '../login/LoginForm'
 import { Input } from '../../components/Input'
 
 export const RegisterForm = () => {
-  const [errorMsg, dispatch] = useFormState(register, undefined)
+  const [status, dispatch] = useFormState(register, undefined)
 
   return <>
     <form action={dispatch}>
@@ -30,7 +30,7 @@ export const RegisterForm = () => {
           <button type="submit" className='bg-white hover:bg-red-500 text-black rounded-md px-5 py-2'>Register</button>
           <p>or <NavLink href='/login'>Login</NavLink></p>
         </div>
-        <p>{errorMsg}</p>
+        {status === 'success' ? <p className='text-green-600 text-center'>{'Sign up successful'}</p> : <p className='text-red-600 text-center'>{status}</p>}
       </div>
     </form>
   </>

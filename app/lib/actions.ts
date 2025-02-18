@@ -21,6 +21,7 @@ export async function authenticate(prevState: string | undefined, formData: Form
 export async function register(prevState: string | undefined, formData: FormData) {
   try {
     await createUser(formData)
+    return 'success';
   } catch (error) {
     if (error instanceof Error) {
       console.error(error)
