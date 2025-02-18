@@ -31,8 +31,11 @@ export async function createUser(formData: FormData) {
     const user = await sql<User>`INSERT INTO users (name, email, password) VALUES (${name}, ${email}, ${hashedPass})`;
     return user.rows[0];
   } catch (error) {
-    console.error('Failed to fetch user:', error);
-    throw new Error('Failed to fetch user.');
+    if (error instanceof Error) {
+      console.error('Failed to create user:', error);
+      if (error.message.includes('duplicate')) throw new Error('User already exists');
+      throw new Error('Failed to create user.');
+      }
   }
 }
 
