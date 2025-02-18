@@ -1,10 +1,10 @@
-import NextAuth, { AuthError } from 'next-auth';
+import NextAuth from 'next-auth';
 import { authConfig } from './auth.config';
 import credentials from 'next-auth/providers/credentials';
 import { z } from 'zod';
 import { User } from './lib/definitions';
 import { sql } from '@vercel/postgres';
-import { compare } from 'bcryptjs';
+import { compare, genSaltSync, hash } from 'bcryptjs';
 
 
 async function getUser(email: string): Promise<User | undefined> {
@@ -24,9 +24,11 @@ export async function createUser(formData: FormData) {
 
   const {name, email, password} = parsedData.data
 
+  const salt = genSaltSync()
+  const hashedPass = await hash(password, salt)
+
   try {
-    // TODO: DON'T STORE UNHASHED PASSWORDS
-    const user = await sql<User>`INSERT INTO users (name, email, password) VALUES (${name}, ${email}, ${password})`;
+    const user = await sql<User>`INSERT INTO users (name, email, password) VALUES (${name}, ${email}, ${hashedPass})`;
     return user.rows[0];
   } catch (error) {
     console.error('Failed to fetch user:', error);
